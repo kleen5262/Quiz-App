@@ -1,0 +1,164 @@
+body {
+	margin: 0;
+	background-color: #021526;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.quiz-container {
+	max-width: 500px;
+	min-height: 500px;
+	background-color: white;
+	margin: 50px auto;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.question-number,
+.question,
+.options,
+.button,
+.answers-tracker {
+	float: left;
+	width: 100%;
+}
+
+.question-number h3 {
+	color: grey;
+	border-bottom: 1px solid black;
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.question {
+	height: 370px;
+	font-size: 24px;
+	color: #000000;
+	padding: 15px 0;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+div[id^="question_"],
+div[id*="question_"] {
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.questionButton {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.questionOption {
+	background-color: grey;
+	font-size: 16px;
+	border-radius: 5px;
+	padding: 15px 20px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.questionOption:hover {
+	background-color: rgb(99, 93, 93);
+	opacity: 4;
+}
+
+.questionOption.correct {
+	background-color: green;
+	color: white;
+	-webkit-animation-duration: .6s;
+	animation-duration: .6s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.questionOption.wrong {
+	background-color: red;
+	color: white;
+	-webkit-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.wrong {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.correct {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.question {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+div[id^="question_"],
+div[id*="question_"] {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.optionDiv {
+	width: 100%;
+}
+
+.correctSoFar {
+	float: right;
+	font-size: x-large;
+	color: green;
+}
+
+.doingwell {
+	color: green;
+}
+
+.notdoingwell {
+	color: red;
+}
+
+.button .bttn {
+	padding: 12px 50px;
+	background-color: #021526;
+	font-size: 16px;
+	margin: 10px 0;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 10px;
+	color: whitesmoke;
+}
